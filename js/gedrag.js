@@ -3,12 +3,12 @@
 
 
 
-var hashRegex = /^[\da-f]{3,6}$/;
+var isColor = /^[\da-f]{3,6}$/i;
 var hasOctothorpe = /^#/;
 
 var hashIsValidColor = function(hash){
   hash = hasOctothorpe.test(hash) ? hash.slice(1) : hash;
-  return hash.length == 3 || hash.length == 6 ? hashRegex.test(hash) : false;
+  return hash.length == 3 || hash.length == 6 ? isColor.test(hash) : false;
 };
 
 var applyColor = function(color, isValid){
@@ -21,7 +21,7 @@ var applyColor = function(color, isValid){
     bod.insertAdjacentHTML('afterBegin', '<h1>The color is: ' + color + '</h1>');
   }
   else{
-    bod.insertAdjacentHTML('afterBegin', '<h1>' + (color.length ? color + ' is not a valid hex color.' : 'Please put a color in this URL’s hash' ) + '</h1>');
+    bod.insertAdjacentHTML('afterBegin', '<h1>' + (color.length ? color + ' is not a valid hex color.' : 'Please put a hex color in this URL’s hash' ) + '</h1>');
   }
 };
 
