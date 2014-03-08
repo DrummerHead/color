@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: #444;
+  line-height: 1;
+}
+h1 {
+  padding: 2em 1em 1em;
+  margin: 0;
+  font-size: 2.75em;
+  background-color: #fff;
+}
+#comparison {
+  position: absolute;
+  top: 11em;
+  right: 0;
+  bottom: 0;
+  width: 5%;
+  max-width: 4em;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+#comparison li {
+  width: 100%;
+  height: 33.3333333%;
+  overflow: hidden;
+  text-indent: 100%;
+}
+#white {
+  background-color: #fff;
+}
+#grey {
+  background-color: #808080;
+}
+#black {
+  background-color: #000;
+}
