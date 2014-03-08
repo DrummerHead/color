@@ -1,6 +1,9 @@
 (function(document){
 
 
+'use strict'
+
+
 
 
 var isColor = /^[\da-f]{3,6}$/i;
@@ -38,4 +41,4 @@ window.addEventListener("hashchange", init, false);
 
 
 
-})(document)
+})(document);
